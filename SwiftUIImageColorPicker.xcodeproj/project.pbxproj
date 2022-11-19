@@ -11,6 +11,8 @@
 		4344697D2928FAAC00FE0FB9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4344697C2928FAAC00FE0FB9 /* ContentView.swift */; };
 		4344697F2928FAAD00FE0FB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4344697E2928FAAD00FE0FB9 /* Assets.xcassets */; };
 		434469822928FAAE00FE0FB9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 434469812928FAAE00FE0FB9 /* Preview Assets.xcassets */; };
+		434469892928FB5600FE0FB9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434469882928FB5600FE0FB9 /* HomeView.swift */; };
+		4344698B292935FD00FE0FB9 /* CustomColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4344698A292935FD00FE0FB9 /* CustomColorPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		4344697C2928FAAC00FE0FB9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4344697E2928FAAD00FE0FB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		434469812928FAAE00FE0FB9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		434469882928FB5600FE0FB9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		4344698A292935FD00FE0FB9 /* CustomColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColorPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				4344697A2928FAAC00FE0FB9 /* SwiftUIImageColorPickerApp.swift */,
+				4344698C2929360100FE0FB9 /* Views */,
 				4344697C2928FAAC00FE0FB9 /* ContentView.swift */,
 				4344697E2928FAAD00FE0FB9 /* Assets.xcassets */,
 				434469802928FAAE00FE0FB9 /* Preview Content */,
@@ -65,6 +70,15 @@
 				434469812928FAAE00FE0FB9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4344698C2929360100FE0FB9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				434469882928FB5600FE0FB9 /* HomeView.swift */,
+				4344698A292935FD00FE0FB9 /* CustomColorPickerView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +151,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				434469892928FB5600FE0FB9 /* HomeView.swift in Sources */,
+				4344698B292935FD00FE0FB9 /* CustomColorPickerView.swift in Sources */,
 				4344697D2928FAAC00FE0FB9 /* ContentView.swift in Sources */,
 				4344697B2928FAAC00FE0FB9 /* SwiftUIImageColorPickerApp.swift in Sources */,
 			);
