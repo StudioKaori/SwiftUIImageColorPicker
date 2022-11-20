@@ -8,12 +8,34 @@
 import SwiftUI
 
 extension View {
+  
+  // Create a swiftui modifier, this method is called for modifier, see homeview
   func imageColorPicker(showPicker: Binding<Bool>, color: Binding<Color>) -> some View {
     return self
       // full sheet
       .fullScreenCover(isPresented: showPicker, content: {
-        CustomColorPicker(color: color)
+        Helper(showPicker: showPicker, color: color)
       })
+  }
+}
+
+// MARK: - Custom View for color picker
+struct Helper: View {
+  @Binding var showPicker: Bool
+  @Binding var color: Color
+  
+  var body: some View {
+    NavigationView {
+      CustomColorPicker(color: $color)
+        .navigationTitle("Image Color Picker")
+        .navigationBarTitleDisplayMode(.inline)
+      // MARK: - close button
+        .toolbar {
+          Button("Close") {
+            showPicker.toggle()
+          }
+        }
+    }
   }
 }
 
@@ -47,7 +69,7 @@ struct CustomColorPicker: UIViewControllerRepresentable {
   // MARK: - Delegate methods
   class Coordinator: NSObject, UIColorPickerViewControllerDelegate {
     
-    // The subject of the management of UIkit view
+    // The management subject of UIkit view
     var parent: CustomColorPicker
     
     init(parent: CustomColorPicker) {

@@ -17,7 +17,7 @@ struct HomeView: View {
       ZStack {
         
         Rectangle()
-          .fill()
+          .fill(selectedColor)
           .ignoresSafeArea()
         
         // MARK: - picker button
