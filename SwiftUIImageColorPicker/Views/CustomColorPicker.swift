@@ -12,7 +12,7 @@ extension View {
     return self
       // full sheet
       .fullScreenCover(isPresented: showPicker, content: {
-        
+        CustomColorPicker(color: color)
       })
   }
 }
@@ -41,7 +41,7 @@ struct CustomColorPicker: UIViewControllerRepresentable {
   }
   
   func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-    <#code#>
+
   }
   
   // MARK: - Delegate methods

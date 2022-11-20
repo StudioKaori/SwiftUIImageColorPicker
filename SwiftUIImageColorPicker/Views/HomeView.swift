@@ -27,6 +27,8 @@ struct HomeView: View {
           Text("Show Image Color Picker")
         }
       }
+      // MARK: - Calling modifier
+      .imageColorPicker(showPicker: $showPicker, color: $selectedColor)
     }
 }
 
