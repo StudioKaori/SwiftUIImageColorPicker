@@ -29,7 +29,15 @@ struct CustomColorPicker: UIViewControllerRepresentable {
   }
   
   func makeUIViewController(context: Context) -> some UIViewController {
-    <#code#>
+    
+    let picker = UIColorPickerViewController()
+    picker.supportsAlpha = false
+    picker.selectedColor = UIColor(color)
+    
+    // connecting delegate
+    picker.delegate = context.coordinator
+    
+    return picker
   }
   
   func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
