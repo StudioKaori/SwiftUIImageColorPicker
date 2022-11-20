@@ -26,15 +26,27 @@ struct Helper: View {
   
   var body: some View {
     NavigationView {
-      CustomColorPicker(color: $color)
-        .navigationTitle("Image Color Picker")
-        .navigationBarTitleDisplayMode(.inline)
-      // MARK: - close button
-        .toolbar {
-          Button("Close") {
-            showPicker.toggle()
-          }
+      
+      VStack {
+        
+        // since we need only live picker button
+        // simply setting the height of the picker to 50
+        // and clipping the remaining content
+        // so that the top bar will only appear
+        CustomColorPicker(color: $color)
+        // cetering it
+          .frame(width: 100, height: 50, alignment: .topLeading)
+          .clipped()
+          .offset(x: 20)
+      }
+      .navigationTitle("Image Color Picker")
+      .navigationBarTitleDisplayMode(.inline)
+      // close button
+      .toolbar {
+        Button("Close") {
+          showPicker.toggle()
         }
+      }
     }
   }
 }
